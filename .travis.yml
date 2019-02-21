@@ -21,8 +21,7 @@ after_success:
   - docker push nawalasansol/multi-server
   - docker push nawalasansol/multi-worker
 
-
-  deploy:
+deploy:
   provider: elasticbeanstalk
   region: us-east-1
   app: multi-docker
@@ -34,4 +33,3 @@ after_success:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: $AWS_SECRET_KEY
-    
